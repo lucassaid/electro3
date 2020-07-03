@@ -26,17 +26,17 @@ export default function() {
           <Grid item xs={12} md={6} lg={3}>
             <Typography variant="h6" className={styles.subtitle}>Contacto</Typography>
             <Typography variant="body2">
-              Av. Guillermo Rawson 215 Sur
+              9 de Julio 1022 (este)
               <br/>
               San Juan, Argentina
               <br/><br/>
               <strong>Ventas: </strong>
               <a
-                href="tel:02644210589" 
+                href="tel:02644200987" 
                 className={styles.link}
                 alt="electro 3 teléfono"
               >
-               (0264) 421-0589
+               (0264) - 420-0987
               </a>
               <br/>
               <strong>Email: </strong>
