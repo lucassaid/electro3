@@ -1,0 +1,41 @@
+.logo {
+  display: block;
+  margin-right: auto;
+  height: 35px;
+}
+
+@media(max-width: 500px) {
+  .logo {
+    height: 25px;
+  }
+}
+
+@media(max-width: 800px) {
+  .container {
+    padding: 0!important;
+  }
+}
+
+.logoImg {
+  height: 100%;
+}
+
+.bar {
+  background-color: rgba(0,0,0,0)!important;
+}
+
+.barNotOnTop {
+  background-color: rgba(13, 39, 53, 0.7)!important;
+  padding: 5px 0;
+}
+
+.link {
+  color: white;
+  margin-left: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.links {
+  text-align: right;
+}

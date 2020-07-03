@@ -1,0 +1,24 @@
+.container {
+  margin: 20px 0;
+}
+
+.item {
+  text-align: center;
+  opacity: 0.6;
+  transform: scale(0.8);
+  transition: all 300ms ease;
+}
+
+.item[active='true'] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.img {
+  height: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+}

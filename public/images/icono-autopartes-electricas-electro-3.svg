@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+   sodipodi:docname="Icono_AUTOPARTES_ELECTRICAS_Electro3WEB.svg"
+   id="svg17"
+   viewBox="0 0 7442.0692 3715.9302"
+   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   version="1.1"
+   height="37.159302mm"
+   width="74.420692mm"
+   xml:space="preserve"><metadata
+   id="metadata21"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg17"
+   inkscape:window-maximized="0"
+   inkscape:window-y="156"
+   inkscape:window-x="375"
+   inkscape:cy="70.226372"
+   inkscape:cx="140.63883"
+   inkscape:zoom="0.77504209"
+   fit-margin-bottom="0"
+   fit-margin-right="0"
+   fit-margin-left="0"
+   fit-margin-top="0"
+   showgrid="false"
+   id="namedview19"
+   inkscape:window-height="480"
+   inkscape:window-width="837"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+ <defs
+   id="defs4">
+  <style
+   id="style2"
+   type="text/css">
+   <![CDATA[
+    .fil0 {fill:#2C2D96}
+    .fil1 {fill:#ECB733}
+   ]]>
+  </style>
+ </defs>
+ <g
+   transform="translate(-6778.9309,-12991.927)"
+   id="Capa_x0020_1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <g
+   id="_2276350025072">
+   <path
+   id="path7"
+   d="m 14221,15168 h -318 v -159 h -318 v -119 l -372,-279 h -265 v -875 c 0,-131 -107,-238 -238,-238 h -80 v -80 c 0,-131 -107,-238 -239,-238 h -2227 c -103,0 -191,66 -224,159 h -651 v 477 h 637 v 333 c -93,33 -159,120 -159,224 v 557 h -478 v 1272 h 478 v 80 c 0,131 107,238 238,238 h 2386 c 104,0 192,-66 224,-159 h 95 c 103,0 191,-66 224,-159 h 279 l 372,-278 v -119 h 318 v -160 h 318 z m -1750,-1750 v 80 h -318 v 636 h -1750 v -795 h 1988 c 44,0 80,35 80,79 z m -2307,-79 h 80 v 795 h -159 v -716 c 0,-44 36,-79 79,-79 z m -716,318 v -159 h 478 v 159 z m 319,1432 v 203 c -47,-27 -101,-44 -159,-44 -59,0 -113,17 -160,44 v -203 z m 0,477 c 0,88 -72,159 -159,159 -88,0 -160,-71 -160,-159 0,-88 72,-159 160,-159 87,0 159,71 159,159 z m -319,477 v -203 c 47,27 101,44 160,44 58,0 112,-17 159,-44 v 203 z m 3023,239 c 0,44 -36,79 -80,79 h -1988 v -1829 h -159 v 1829 h -239 c -44,0 -79,-35 -79,-79 v -1909 c 0,-44 35,-80 79,-80 h 1989 v 1909 h 159 v -1909 h 238 c 44,0 80,36 80,80 z m 318,-159 c 0,44 -36,79 -79,79 h -80 v -1829 c 0,-132 -107,-239 -239,-239 h -79 v -477 h 398 c 43,0 79,36 79,79 z m 637,-279 -266,199 h -212 v -1273 h 212 l 266,199 z m 318,-199 h -159 v -477 h 159 z m 318,-159 h -159 v -159 h 159 z m 0,0 z"
+   class="fil0" />
+   <g
+   id="g13">
+    <path
+   id="path9"
+   d="m 7347,16212 c 37,-39 139,-179 178,-230 268,-346 533,-704 799,-1050 l 445,-587 -710,-1 338,-590 c 57,-99 113,-195 169,-294 20,-36 165,-283 167,-298 H 7711 c -12,16 -35,79 -46,103 -15,36 -30,70 -45,106 l -583,1374 c -13,32 -36,75 -44,106 h 735 l -51,186 c -100,346 -134,479 -330,1175 z"
+   class="fil1" />
+    <path
+   id="path11"
+   d="m 7506,15021 -199,711 c -69,238 -133,477 -201,715 -10,35 -47,151 -46,179 1,60 71,107 131,67 20,-13 376,-486 398,-516 97,-130 201,-261 297,-390 l 197,-259 c 297,-386 592,-782 889,-1168 31,-40 81,-89 35,-153 -31,-45 -131,-31 -196,-31 -153,-1 -307,0 -460,0 l 306,-537 c 51,-89 102,-176 153,-267 14,-25 147,-251 152,-269 10,-32 -1,-63 -16,-82 -16,-19 -42,-28 -77,-28 H 7815 c -239,0 -205,-23 -278,144 -212,485 -416,987 -628,1476 -27,64 -105,241 -125,295 -18,51 12,112 89,112 71,1 142,0 212,0 137,1 286,-6 421,1 z"
+   class="fil1" />
+   </g>
+  </g>
+ </g>
+</svg>

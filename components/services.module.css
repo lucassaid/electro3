@@ -1,0 +1,13 @@
+.img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}

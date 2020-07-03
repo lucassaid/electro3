@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="91.919998mm"
+   height="14.379999mm"
+   clip-rule="evenodd"
+   fill-rule="evenodd"
+   image-rendering="optimizeQuality"
+   shape-rendering="geometricPrecision"
+   text-rendering="geometricPrecision"
+   version="1.1"
+   viewBox="0 0 9191.9998 1438"
+   xml:space="preserve"
+   id="svg34"
+   sodipodi:docname="logo-electro-3-san-juan.svg"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"><sodipodi:namedview
+   fit-margin-bottom="0"
+   fit-margin-right="0"
+   fit-margin-left="0"
+   fit-margin-top="0"
+   inkscape:document-rotation="0"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1854"
+   inkscape:window-height="1016"
+   id="namedview36"
+   showgrid="false"
+   inkscape:zoom="3.4795758"
+   inkscape:cx="173.70709"
+   inkscape:cy="27.174802"
+   inkscape:window-x="66"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg34" /><metadata
+   id="metadata2"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata>
+ <defs
+   id="defs6">
+  <style
+   type="text/css"
+   id="style4">
+   <![CDATA[
+    .fil2 {fill:#2E308C}
+    .fil1 {fill:#F0161D}
+    .fil0 {fill:white}
+   ]]>
+  </style>
+ 
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+ </defs>
+ <path
+   id="path10"
+   d="m 7710,0 h 1109 c 205,0 373,169 373,375 v 688 c 0,206 -168,375 -373,375 H 6623 C 6938,954 7524,515 7524,515 L 7175,476 C 7313,281 7494,125 7710,0 Z"
+   class="fil1" /><path
+   id="path12"
+   d="m 373,0 h 6759 c -402,296 -489,600 -489,600 l 402,30 c 0,0 -23,33 -294,357 -164,197 -232,356 -260,451 H 373 C 168,1438 0,1269 0,1063 V 375 C 0,169 168,0 373,0 Z"
+   class="fil2" /><path
+   id="path14"
+   d="m 6643,600 402,30 c 0,0 -23,33 -294,357 -164,197 -232,356 -260,451 h 132 C 6938,954 7524,515 7524,515 L 7175,476 C 7313,281 7494,125 7710,0 h -578 c -402,296 -489,600 -489,600 z"
+   class="fil0" /><path
+   id="path16"
+   d="M 1205,811 V 687 C 1205,519 1052,474 910,474 H 581 c -141,0 -291,49 -291,207 v 182 c 0,144 111,193 243,193 h 401 c 122,0 255,-38 260,-184 H 961 c 0,0 -3,18 -18,35 -15,18 -33,28 -50,27 -18,-1 -26,0 -26,0 H 622 c 0,0 -48,0 -66,-16 -18,-15 -25,-24 -25,-40 V 811 Z M 531,693 h 418 c 0,0 6,-42 -22,-71 -29,-30 -88,-27 -88,-27 H 647 c 0,0 -107,-1 -116,98 z"
+   class="fil0" /><path
+   id="path18"
+   d="m 2681,764 v 112 c 0,135 119,180 232,180 h 445 c 0,0 97,-1 178,-54 82,-53 71,-175 71,-175 h -252 c -1,51 -53,80 -99,80 h -216 c -106,0 -117,-48 -117,-143 0,-92 9,-142 117,-142 h 204 c 49,0 110,20 111,79 h 252 C 3622,531 3477,473 3334,473 h -426 c -117,0 -227,55 -227,183 z"
+   class="fil0" /><rect
+   id="rect20"
+   height="819"
+   width="261"
+   y="237"
+   x="1301"
+   class="fil0" /><path
+   id="path22"
+   d="m 3780,345 h 261 v 137 h 416 v 148 h -416 v 175 c 7,133 158,129 199,77 22,-27 22,-68 22,-68 h 214 c 9,148 -57,242 -209,242 h -310 c -130,0 -177,-80 -177,-195 V 630 H 3646 V 482 h 134 z"
+   class="fil0" /><path
+   id="path24"
+   d="m 4548,472 h 261 v 93 c 51,-54 133,-101 264,-101 302,0 284,182 284,182 v 92 h -261 v -56 c 0,-12 -24,-66 -139,-66 -115,0 -148,148 -148,148 v 292 h -261 z"
+   class="fil0" /><path
+   id="path26"
+   d="m 5435,764 v 63 c 0,0 -1,12 0,30 0,169 115,199 249,199 h 428 c 151,0 249,-44 249,-199 1,-18 0,-30 0,-30 V 701 c 0,0 1,-11 0,-29 0,-169 -114,-199 -249,-199 h -418 c -186,0 -259,43 -259,237 z m 644,-118 c -9,-9 -18,-15 -26,-18 -19,-6 -36,-6 -36,-6 h -237 c -51,2 -93,37 -93,90 v 106 c 0,59 50,89 105,89 h 210 c 50,0 93,-18 106,-72 1,-2 1,-6 2,-10 3,-30 0,-88 -1,-117 0,-25 -12,-45 -30,-62 z"
+   class="fil0" /><path
+   id="path28"
+   d="M 2585,811 V 687 c 0,-168 -153,-213 -295,-213 h -330 c -140,0 -290,49 -290,207 v 182 c 0,144 111,193 243,193 h 401 c 122,0 255,-38 259,-184 h -232 c 0,0 -3,18 -18,35 -15,18 -33,28 -50,27 -18,-1 -26,0 -26,0 h -245 c 0,0 -48,0 -66,-16 -18,-15 -25,-24 -25,-40 V 811 Z M 1911,693 h 418 c 0,0 6,-42 -22,-71 -29,-30 -89,-27 -89,-27 h -191 c 0,0 -107,-1 -116,98 z"
+   class="fil0" /><path
+   id="path30"
+   d="m 7765,592 h 237 c 0,0 -5,-100 57,-100 h 393 c 0,0 106,-3 106,76 0,78 -98,75 -98,75 h -281 v 158 h 281 c 0,0 98,-4 98,75 0,79 -106,76 -106,76 h -393 c -62,0 -57,-100 -57,-100 h -237 v 76 c 0,154 187,176 301,176 h 518 c 188,0 207,-95 207,-220 0,-124 -142,-162 -142,-162 0,0 142,-38 142,-162 0,-125 -19,-220 -207,-220 h -518 c -114,0 -301,22 -301,176 z"
+   class="fil0" />
+</svg>
