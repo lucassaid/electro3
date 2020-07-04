@@ -31,7 +31,7 @@ export default function Services() {
   const classes = useStyles()
 
   return(
-    <Grid container spacing={4}>
+    <Grid id="services" container spacing={4}>
       {services.map(service => 
         <Grid key={service.image} item xs={12} sm={6} md={3}>
           <Card className={classes.card}>

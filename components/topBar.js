@@ -24,7 +24,8 @@ const ElevationScroll = ({children}) => {
 }
 
 
-export default function TopBar({page, onOpenDrawer}) {
+export default function TopBar({page, onOpenDrawer, onLinkClick}) {
+
   return(
     <ElevationScroll>
       <AppBar position="fixed" className={styles.appBar}>
@@ -40,17 +41,19 @@ export default function TopBar({page, onOpenDrawer}) {
               </Grid>
               <Hidden smDown>
                 <Grid item xs={9} className={styles.links}>
-                    {menuItems.map(item => 
-                      <Link key={item.id} href={item.link}>
-                        <a 
-                          className={styles.link}
-                          active={(page == item.link.substring(1)).toString()}
-                          alt={item.alt}
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
-                    )}
+                  {menuItems.map(item => 
+                    <Link key={item.id} href={item.link}>
+                      <a 
+                        name={item.name}
+                        className={styles.link}
+                        onClick={onLinkClick}
+                        active={(page == item.link.substring(1)).toString()}
+                        alt={item.alt}
+                      >
+                        {item.name}
+                      </a>
+                    </Link>
+                  )}
                 </Grid>
               </Hidden>
               <Hidden mdUp>

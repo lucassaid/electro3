@@ -10,7 +10,7 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 export default function() {
   return(
-    <footer className={styles.footer}>
+    <footer  className={styles.footer}>
       <Container>
         <Grid spacing={4} container className={styles.container}>
           <Grid item xs={12} md={6} lg={3}>
@@ -48,16 +48,22 @@ export default function() {
                 consultas@electro3.com.ar
               </a>
               <br/>
-              <br/>
-              <a href="https://wa.me/5492645407221" className={styles.socialLink} target="_blank">
-                <InstagramIcon></InstagramIcon>
-              </a>
-              <a href="https://www.instagram.com/electro3.sj/" className={styles.socialLink} target="_blank">
-                <WhatsAppIcon></WhatsAppIcon>
-              </a>
             </Typography>
+            <br/>
+            <Link href='/contacto'>
+              <a className={styles.link} alt='Ir a contacto'>Ir a contacto &rarr;</a>
+            </Link>
+            <br/>
+            <br/>
+            <a href="https://wa.me/5492645407221" className={styles.socialLink} target="_blank">
+              <InstagramIcon></InstagramIcon>
+            </a>
+            <a href="https://www.instagram.com/electro3.sj/" className={styles.socialLink} target="_blank">
+              <WhatsAppIcon></WhatsAppIcon>
+            </a>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
+            <Map></Map>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
             <Typography variant="h6" className={styles.subtitle}>Acerca de Electro 3</Typography>
@@ -70,6 +76,7 @@ export default function() {
         </Grid>
 
       </Container>
+
       <div className={styles.footerBottom}>
         <Typography variant="body2">
           © Copyright <strong>Electro 3</strong>. Todos los derechos reservados.

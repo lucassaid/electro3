@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-export default ({page, onClose, open}) => {
+export default ({page, onClose, open, onLinkClicked}) => {
   
   const classes = useStyles()
 
@@ -39,7 +39,12 @@ export default ({page, onClose, open}) => {
           {menuItems.map(link => 
             <Typography key={link.id} variant="h5" component="h2">
               <Link href={link.link}>
-                <a alt={link.alt} className={styles.link}>
+                <a 
+                  name={link.name}
+                  onClick={onLinkClicked}
+                  alt={link.alt}
+                  className={styles.link}
+                >
                   {link.name}
                 </a>
               </Link>

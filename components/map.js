@@ -1,24 +1,53 @@
-import React from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
- 
-export class MapContainer extends React.Component {
-  render() {
-    return (
-      <Map google={this.props.google} zoom={14}>
- 
-        <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
- 
-        <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>Aca</h1>
-          </div>
-        </InfoWindow>
-      </Map>
-    );
-  }
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
+import LocationOn from '@material-ui/icons/LocationOn';
+import styles from './map.module.css'
+import Tooltip from '@material-ui/core/Tooltip'
+import Button from '@material-ui/core/Button'
+import addresses from '../data/addresses'
+
+function handleMarkerHover() {
+  console.log("aki")
 }
- 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyBadrEzn3x1m-UDvo8uTM6zrgMAa0lWjkI')
-})(MapContainer)
+
+const Marker = ({address}) => {
+  return(
+    <div
+      onMouseEnter={handleMarkerHover}
+      className={styles.marker}
+    >
+      <Tooltip title={address.address}>
+        <Button className={styles.button}>
+          <LocationOn style={{ fontSize: 40 }} className={styles.markerIcon} ></LocationOn>
+        </Button>
+      </Tooltip>
+    </div>
+  )
+}
+
+export default function Map() {
+  const center = {
+    lat: -31.543852,
+    lng: -68.524590
+  }
+
+  return (
+    // Important! Always set the container height explicitly
+    <div style={{ height: '200px', width: '100%', borderRadius: '5px', overflow: 'hidden' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: 'AIzaSyBadrEzn3x1m-UDvo8uTM6zrgMAa0lWjkI' }}
+        defaultCenter={center}
+        defaultZoom={13}
+      >
+        {addresses.map(marker => 
+          <Marker
+            key={marker.key}
+            lat={marker.lat}
+            lng={marker.lng}
+            address={marker}
+          />
+        )}
+      </GoogleMapReact>
+    </div>
+  );
+}

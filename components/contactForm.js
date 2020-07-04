@@ -11,6 +11,7 @@ import AttachmentIcon from '@material-ui/icons/Attachment'
 import AttachFileIcon from '@material-ui/icons/AttachFile'
 import Chip from '@material-ui/core/Chip'
 import axios from 'axios'
+import MuiAlert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -33,42 +34,48 @@ const areas = [
   'Compactación y reciclado',
   'Autopartes eléctricas',
   'Baterías',
-  'Trabajá con nosotros'
+  // 'Trabajá con nosotros'
 ]
 
-function OptInForm({submitCV}) {
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+function OptInForm({area}) {
   const classes = useStyles()
 
   const INITIAL_STATE = {
-    name: '',
+    area: area || 'General',
+    nombre: '',
     email: '',
-    text: '',
-    file: '',
-    area: submitCV ? 'Trabajá con nosotros' : 'General'
+    mensaje: ''
   }
 
   const [inputs, setInputs] = useState(INITIAL_STATE)
-  
+  const [fileName, setFileName] = useState('')
+
   const handleInputChange = e => {
+    console.log(e)
+    const value = e.target.id == 'file' ? [e.target.files[0]] : e.target.value
     setInputs({
       ...inputs,
-      [e.target.id]: e.target.value
+      [e.target.id]: value
     })
   }
 
   const handleFileChange = e => {
+    handleInputChange(e)
+
     const file = e.target.files[0]
-    setInputs({
-      ...inputs,
-      file
-    })
+    setFileName(file.name)
   }
 
   const handleDeleteCV = () => {
     setInputs({
       ...inputs,
-      file: ''
+      file: {}
     })
+    setFileName('')
   }
 
   const [status, setStatus] = useState({
@@ -111,20 +118,16 @@ function OptInForm({submitCV}) {
       })
   }
 
-  if(status.submitting) return (
-    <>'Enviando'</>
-  )
-
   if(status.submitted) return (
-    <>'Enviado'</>
+    <Alert severity="success">Tu consulta ha sido enviada</Alert>
   )
 
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form id="form" onSubmit={handleOnSubmit}>
       <TextField
         type="text"
-        id="name"
-        name="name"
+        id="nombre"
+        name="nombre"
         onChange={handleInputChange}
         label="Nombre y apellido"
         value={inputs.name}
@@ -143,54 +146,55 @@ function OptInForm({submitCV}) {
         required
         className={classes.formControl}
       />
+
+      <FormControl variant="outlined">
+        <InputLabel id="demo-simple-select-outlined-label">Área</InputLabel>
+        <Select
+          labelId="demo-simple-select-outlined-label"
+          id="area"
+          name="area"
+          value={inputs.area}
+          onChange={e => handleInputChange({target: {id: 'area', value: e.target.value}})}
+          label="Área"
+          className={classes.formControl}
+        >
+          {areas.map(area =>
+            <MenuItem key={area} value={area}>{area}</MenuItem>
+          )}
+        </Select>
+      </FormControl>
       
-      {submitCV ? (
+      {inputs.area == 'Trabajá con nosotros' && (
         <div className={classes.formControl}>
-          {inputs.file != '' ? (
+          <input
+            id="cv"
+            name="cv"
+            type="file"
+            hidden
+            required
+            className={classes.formControl}
+            onChange={handleFileChange}
+          />
+          {fileName != '' ? (
             <Chip
               icon={<AttachFileIcon/>}
-              label={inputs.file.name}
+              label={fileName}
               onDelete={handleDeleteCV}
             />
           ) : (
             <>
-              <input
-                id="newFile"
-                hidden
-                type="file"
-                required
-                value={inputs.file}
-                className={classes.formControl}
-                onChange={handleFileChange}
-              />
-              <label for="newFile" className={classes.inputTypeFileLabel}>
+              <label htmlFor="cv" className={classes.inputTypeFileLabel}>
                 <AttachmentIcon></AttachmentIcon>
                 &nbsp;&nbsp;Subir CV
               </label>
             </>
           )}
         </div> 
-      ) : (
-        <FormControl variant="outlined">
-          <InputLabel id="demo-simple-select-outlined-label">Área</InputLabel>
-          <Select
-            labelId="demo-simple-select-outlined-label"
-            id="message"
-            name="message"
-            value={inputs.area}
-            onChange={handleInputChange}
-            label="Área"
-            className={classes.formControl}
-            disabled={submitCV}
-          >
-            {areas.map(area =>
-              <MenuItem key={area} value={area}>{area}</MenuItem>
-            )}
-          </Select>
-        </FormControl>
       )}
+
       <TextField
-        id="outlined-multiline-static"
+        id="mensaje"
+        name="mensaje"
         label="Consulta"
         multiline
         rows={3}
@@ -204,11 +208,14 @@ function OptInForm({submitCV}) {
           variant="contained"
           color="primary"
           disableElevation
+          disabled={status.submitting}
         > 
           <SendIcon></SendIcon>
-          <span>&nbsp;&nbsp;Enviar</span>
+          <span>&nbsp;&nbsp;{status.submitting ? 'Enviando' : 'Enviar'}</span>
         </Button>
       </div>
+
+      <input type="hidden" name="_subject" value="Nueva consulta desde electro3.com.ar"></input>
     </form>    
   )
 }

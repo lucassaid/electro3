@@ -1,0 +1,16 @@
+.map {
+  width: 100%;
+}
+
+.marker {
+  cursor: pointer;
+}
+
+.button {
+  top: -36px;
+  left: -30px;
+}
+
+.markerIcon {
+  color: #ED262D;
+}

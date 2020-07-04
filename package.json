@@ -10,8 +10,9 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.19.2",
-    "google-maps-react": "^2.0.6",
+    "google-map-react": "^1.1.7",
     "next": "9.4.4",
     "pure-react-carousel": "^1.27.1",
     "react": "16.13.1",
