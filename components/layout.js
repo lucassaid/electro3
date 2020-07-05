@@ -50,13 +50,13 @@ export default function Layout({children, page, carouselData, isService}) {
         <Carousel data={carouselData}></Carousel>
       )}
 
-      {/* <Container>
+      <Container>
         {page == 'home' && <Services onLinkClicked={handleLinkClick}></Services>}
         {isService && <ServicesNav page={page}></ServicesNav>}
         <main>
           {children}
         </main>
-      </Container>   */}
+      </Container>  
 
       <Footer></Footer>
 
