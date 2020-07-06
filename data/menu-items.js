@@ -13,7 +13,7 @@ export default [
   // },
   {
     name: 'Servicios',
-    link: '/',
+    link: '/servicios',
     alt: 'Nuestros servicios',
     id: '2'
   },

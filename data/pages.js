@@ -1,3 +1,5 @@
+import servicesData from './services'
+
 export const tech = {
   rows: [
     {
@@ -79,4 +81,15 @@ export const bateries = {
       ]
     }
   ]
+}
+
+export const services = {
+  rows: servicesData.map(service => {
+    return {
+      ...service,
+      style: {marginBottom: '40px', marginTop: '20px'},
+      imageStyle: {width: '100px'},
+      paragraphs: [service.desc]
+    }
+  })
 }

@@ -60,3 +60,9 @@ export const workWithUs = {
   short: true,
   slides: [home.slides[4]]
 }
+
+export const services = {
+  title: 'SERVICIOS',
+  short: true,
+  slides: [home.slides[0]]
+}

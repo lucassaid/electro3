@@ -20,30 +20,21 @@ export default function Layout({children, page, carouselData, isService}) {
     setDrawerOpened(false)
   }
 
-  const handleLinkClick = (e) => {
-    setDrawerOpened(false)
-    if(e.target.name == 'Servicios' && page == 'home') {
-      e.preventDefault()
-      const anchor = document.querySelector('#services');
-      if(anchor) {
-        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  }
-
   return (
     <div>
       <Head>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <TopBar page={page} onOpenDrawer={handleDrawerOpen}></TopBar>
+      <TopBar
+        page={page} 
+        onOpenDrawer={handleDrawerOpen}
+      ></TopBar>
 
       <Drawer
         page={page}
         onClose={handleDrawerClose}
         open={drawerOpened}
-        onLinkClicked={handleLinkClick}
       ></Drawer>
 
       {carouselData && (
@@ -51,7 +42,7 @@ export default function Layout({children, page, carouselData, isService}) {
       )}
 
       <Container>
-        {page == 'home' && <Services onLinkClicked={handleLinkClick}></Services>}
+        {page == 'home' && <Services></Services>}
         {isService && <ServicesNav page={page}></ServicesNav>}
         <main>
           {children}

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-export default ({page, onClose, open, onLinkClicked}) => {
+export default ({page, onClose, open}) => {
   
   const classes = useStyles()
 
@@ -41,7 +41,6 @@ export default ({page, onClose, open, onLinkClicked}) => {
               <Link href={link.link}>
                 <a 
                   name={link.name}
-                  onClick={onLinkClicked}
                   alt={link.alt}
                   className={styles.link}
                 >

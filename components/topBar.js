@@ -24,7 +24,7 @@ const ElevationScroll = ({children}) => {
 }
 
 
-export default function TopBar({page, onOpenDrawer, onLinkClick}) {
+export default function TopBar({page, onOpenDrawer}) {
 
   return(
     <ElevationScroll>
@@ -46,7 +46,6 @@ export default function TopBar({page, onOpenDrawer, onLinkClick}) {
                       <a 
                         name={item.name}
                         className={styles.link}
-                        onClick={onLinkClick}
                         active={(page == item.link.substring(1)).toString()}
                         alt={item.alt}
                       >
