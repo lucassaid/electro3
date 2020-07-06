@@ -1,4 +1,3 @@
-import Map from './map'
 import styles from './footer.module.css'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -7,6 +6,12 @@ import services from '../data/services'
 import Link from 'next/link'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(
+  () => import('./map'),
+  { ssr: false }
+)
 
 export default function() {
   return(
