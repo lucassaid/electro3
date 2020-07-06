@@ -56,7 +56,7 @@ export default function Layout({children, page, carouselData, isService}) {
         <main>
           {children}
         </main>
-      </Container>  
+      </Container>
 
       <Footer></Footer>
 
