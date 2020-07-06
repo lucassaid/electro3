@@ -24,6 +24,12 @@ export default function Layout({children, page, carouselData, isService}) {
     <div>
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+        <meta name="og:site_name" content="Electro 3"/>
+        <meta name="og:title" content="Electro 3" />
+        <meta name="og:description" content="Fibra óptica y seguridad urbana - Operadores activos de chatarra" />
+        <meta name="og:image" itemProp="image" content="https://electro3.com.ar/images/logo-electro-3-san-juan.png"/>
+        <meta name="og:type" content="website" />
       </Head>
 
       <TopBar
