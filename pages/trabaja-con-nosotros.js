@@ -22,10 +22,10 @@ export default function Tech() {
             alignItems="center"
           >
             <Grid item xs={12} md={6}>
-              <Typography variant="h5">
+              <Typography variant="h5" style={{marginBottom: '20px'}}>
                 Envianos tus datos y nos pondremos en contacto con vos.
               </Typography>
-              <ContactForm submitCV></ContactForm>
+              <ContactForm area="Trabajá con nosotros"></ContactForm>
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="body2">

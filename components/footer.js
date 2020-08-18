@@ -60,10 +60,10 @@ export default function() {
             </Link>
             <br/>
             <br/>
-            <a href="https://wa.me/5492645407221" className={styles.socialLink} target="_blank">
+            <a href="https://www.instagram.com/electro3.sj/" className={styles.socialLink} target="_blank">
               <InstagramIcon></InstagramIcon>
             </a>
-            <a href="https://www.instagram.com/electro3.sj/" className={styles.socialLink} target="_blank">
+            <a href="https://wa.me/5492645407221" className={styles.socialLink} target="_blank">
               <WhatsAppIcon></WhatsAppIcon>
             </a>
           </Grid>

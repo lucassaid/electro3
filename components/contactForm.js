@@ -34,48 +34,29 @@ const areas = [
   'Compactación y reciclado',
   'Autopartes eléctricas',
   'Baterías',
-  // 'Trabajá con nosotros'
+  'Trabajá con nosotros'
 ]
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-function OptInForm({area}) {
+function ContactForm({area}) {
   const classes = useStyles()
 
   const INITIAL_STATE = {
     area: area || 'General',
-    nombre: '',
+    name: '',
     email: '',
-    mensaje: ''
+    message: 'message prueba',
+    files: []
   }
 
   const [inputs, setInputs] = useState(INITIAL_STATE)
-  const [fileName, setFileName] = useState('')
 
-  const handleInputChange = e => {
-    console.log(e)
-    const value = e.target.id == 'file' ? [e.target.files[0]] : e.target.value
-    setInputs({
-      ...inputs,
-      [e.target.id]: value
-    })
-  }
-
-  const handleFileChange = e => {
-    handleInputChange(e)
-
-    const file = e.target.files[0]
-    setFileName(file.name)
-  }
-
-  const handleDeleteCV = () => {
-    setInputs({
-      ...inputs,
-      file: {}
-    })
-    setFileName('')
+  const handleInputChange = ({target}) => {
+    const value = target.id == 'files' ? target.files : target.value
+    setInputs({ ...inputs, [target.id]: value})
   }
 
   const [status, setStatus] = useState({
@@ -102,10 +83,17 @@ function OptInForm({area}) {
   const handleOnSubmit = e => {
     e.preventDefault()
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+
     axios({
       method: 'POST',
-      url: 'https://formspree.io/xdowwawl',
-      data: inputs
+      // url: 'https://formspree.io/xdowwawl',
+      url: '/api/contact',
+      // headers: {
+      //   // 'Accept': 'application/json, multipart/form-data, *',
+      //   'Content-Type': 'multipart/form-data',
+      // },
+      // transformRequest: (data, request) => data, 
+      data: new FormData(e.target)
     })
       .then(response => {
         handleServerResponse(
@@ -126,25 +114,27 @@ function OptInForm({area}) {
     <form id="form" onSubmit={handleOnSubmit}>
       <TextField
         type="text"
-        id="nombre"
-        name="nombre"
+        id="name"
+        name="name"
         onChange={handleInputChange}
         label="Nombre y apellido"
         value={inputs.name}
         variant="outlined"
         required
         className={classes.formControl}
+        autoComplete="name"
       />
       <TextField
         id="email"
         type="email"
-        name="_replyto"
+        name="email"
         onChange={handleInputChange}
         label="Email"
         value={inputs.email}
         variant="outlined"
         required
         className={classes.formControl}
+        autoComplete="email"
       />
 
       <FormControl variant="outlined">
@@ -167,23 +157,23 @@ function OptInForm({area}) {
       {inputs.area == 'Trabajá con nosotros' && (
         <div className={classes.formControl}>
           <input
-            id="cv"
+            id="files"
             name="cv"
             type="file"
             hidden
             required
             className={classes.formControl}
-            onChange={handleFileChange}
+            onChange={handleInputChange}
           />
-          {fileName != '' ? (
+          {inputs.files.length ? (
             <Chip
               icon={<AttachFileIcon/>}
-              label={fileName}
-              onDelete={handleDeleteCV}
+              label={inputs.files[0].name}
+              onDelete={() => setInputs({ ...inputs, files: [] })}
             />
           ) : (
             <>
-              <label htmlFor="cv" className={classes.inputTypeFileLabel}>
+              <label htmlFor="files" className={classes.inputTypeFileLabel}>
                 <AttachmentIcon></AttachmentIcon>
                 &nbsp;&nbsp;Subir CV
               </label>
@@ -193,14 +183,15 @@ function OptInForm({area}) {
       )}
 
       <TextField
-        id="mensaje"
-        name="mensaje"
+        id="message"
+        name="message"
         label="Consulta"
         multiline
         rows={3}
         variant="outlined"
         className={classes.formControl}
         onChange={handleInputChange}
+        value={inputs.message}
       />
       <div className={classes.formControl} style={{textAlign: 'right'}}>
         <Button
@@ -215,9 +206,8 @@ function OptInForm({area}) {
         </Button>
       </div>
 
-      <input type="hidden" name="_subject" value="Nueva consulta desde electro3.com.ar"></input>
     </form>    
   )
 }
 
-export default OptInForm
+export default ContactForm
