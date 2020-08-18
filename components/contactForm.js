@@ -48,7 +48,7 @@ function ContactForm({area}) {
     area: area || 'General',
     name: '',
     email: '',
-    message: 'message prueba',
+    message: '',
     files: []
   }
 
