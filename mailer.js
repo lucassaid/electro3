@@ -7,12 +7,12 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     type: 'OAuth2',
-    accessToken: 'ya29.a0AfH6SMBUAj__UlB8I_u-nfePLnAFW66X5T8lkeOpESVv6uLF4iRmgYbCJYqYNGm3HyiRLYaYlmus2fAJqHSAHKkLnZybZaO1C_dQARDSCvjdMlpXAA_GKK-yRJ0jKHuRGtkZeL5apKKJ3eyBXr5zfmWF4hdgZqz_nMo',
+    accessToken: process.env.AUTH_ACCESS_TOKEN,
     expires: 1484314697598,
-    user: 'lucas.203.95@gmail.com',
-    clientId: '663289076275-56kkvods3bq9a2e52katrks934e65lak.apps.googleusercontent.com',
-    clientSecret: 'NaQziHiZK24XVI_GVLYwxBAR',
-    refreshToken: '1//0f6Ay_Irdu3ntCgYIARAAGA8SNwF-L9IrRShnJZF-WQ9DAgQigjvaTsMm1bMxDUZrF5AN3hnOm1kjNtumuIrfyasBzvjp9gvwSJ0'
+    user: process.env.AUTH_USER,
+    clientId: process.env.AUTH_CLIENT_ID,
+    clientSecret: process.env.AUTH_CLIENT_SECRET,
+    refreshToken: process.env.AUTH_REFRESH_TOKEN,
   }
 });
 
